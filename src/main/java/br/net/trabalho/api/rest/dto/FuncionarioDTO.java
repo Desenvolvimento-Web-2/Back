@@ -1,16 +1,20 @@
 package br.net.trabalho.api.rest.dto;
 
-public class UsuarioDTO {
-    private Long id;
+import java.util.Date;
+
+public class FuncionarioDTO {
+    private int id;
     private String nome;
     private String email;
+    private String senha;
     private String perfil;
+    private Date dataNascimento;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -30,11 +34,27 @@ public class UsuarioDTO {
         this.email = email;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public String getPerfil() {
         return perfil;
     }
 
     public void setPerfil(String perfil) {
         this.perfil = perfil;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }
